@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Inteligencia estratégica independiente para quienes toman decisiones."
+    />
+    <meta name="theme-color" content="#080b0f" />
+    <title>Velazquez Global Strategy — Inteligencia para decidir</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: "#080b0f",
+              panel: "#0d1218",
+              line: "#202a33",
+              muted: "#87939e",
+              signal: "#b8e986",
+            },
+            fontFamily: {
+              sans: ["DM Sans", "ui-sans-serif", "system-ui", "sans-serif"],
+              mono: ["IBM Plex Mono", "ui-monospace", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 6rem;
+      }
+
+      body {
+        background-image: radial-gradient(
+          ellipse at 50% -25%,
+          rgba(184, 233, 134, 0.075),
+          transparent 48%
+        );
+      }
+
+      ::selection {
+        color: #080b0f;
+        background: #b8e986;
+      }
+
+      .grid-texture {
+        background-image: linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+        background-size: 40px 40px;
+        mask-image: linear-gradient(to bottom, black, transparent 85%);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-ink font-sans text-slate-100 antialiased">
+    <a
+      href="#main-content"
+      class="sr-only z-50 rounded bg-signal px-4 py-2 text-ink focus:not-sr-only focus:fixed focus:left-4 focus:top-4"
+    >
+      Saltar al contenido
+    </a>
+
+    <header class="fixed inset-x-0 top-0 z-40 border-b border-line/80 bg-ink/90 backdrop-blur-xl">
+      <nav
+        aria-label="Navegación principal"
+        class="mx-auto flex h-[72px] max-w-7xl items-center justify-between px-5 sm:px-8"
+      >
+        <a href="#inicio" class="group flex items-center gap-3" aria-label="Velazquez Global Strategy, inicio">
+          <span
+            class="grid h-9 w-9 place-items-center border border-signal/40 font-mono text-sm font-semibold text-signal transition-colors group-hover:bg-signal group-hover:text-ink"
+            aria-hidden="true"
+          >
+            V.
+          </span>
+          <span class="leading-tight">
+            <span class="block text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-100">
+              Velazquez
+            </span>
+            <span class="mt-1 block font-mono text-[9px] uppercase tracking-[0.18em] text-muted">
+              Global Strategy
+            </span>
+          </span>
+        </a>
+
+        <div class="hidden items-center gap-7 md:flex">
+          <a class="text-xs text-muted transition hover:text-white" href="#executive-summary">Executive Summary</a>
+          <a class="text-xs text-muted transition hover:text-white" href="#geopolitica">Geopolítica Global</a>
+          <a class="text-xs text-muted transition hover:text-white" href="#ciberdefensa">Ciberdefensa</a>
+          <a class="text-xs text-muted transition hover:text-white" href="#finanzas">Análisis Financiero</a>
+          <a class="text-xs text-muted transition hover:text-white" href="blog/">Publicaciones</a>
+        </div>
+
+        <a
+          href="#briefings"
+          class="hidden items-center gap-2 border border-line px-3 py-2 font-mono text-[10px] uppercase tracking-wider text-slate-300 transition hover:border-signal/50 hover:text-signal sm:flex"
+        >
+          <span class="h-1.5 w-1.5 rounded-full bg-signal"></span>
+          Acceso a briefings
+        </a>
+
+        <button
+          id="menu-toggle"
+          type="button"
+          aria-label="Abrir menú"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          class="grid h-10 w-10 place-items-center border border-line text-slate-300 md:hidden"
+        >
+          <svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.5" />
+          </svg>
+        </button>
+      </nav>
+      <div id="mobile-menu" class="hidden border-t border-line bg-ink px-5 py-4 md:hidden">
+        <div class="mx-auto flex max-w-7xl flex-col gap-4">
+          <a class="text-sm text-slate-300" href="#executive-summary">Executive Summary</a>
+          <a class="text-sm text-slate-300" href="#geopolitica">Geopolítica Global</a>
+          <a class="text-sm text-slate-300" href="#ciberdefensa">Ciberdefensa</a>
+          <a class="text-sm text-slate-300" href="#finanzas">Análisis Financiero</a>
+          <a class="text-sm text-slate-300" href="blog/">Publicaciones</a>
+          <a class="text-sm text-signal" href="#briefings">Acceso a briefings <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main-content" class="pt-[72px]">
+      <section id="inicio" class="relative isolate overflow-hidden">
+        <div class="grid-texture absolute inset-0 -z-10" aria-hidden="true"></div>
+        <div class="mx-auto max-w-7xl px-5 pb-20 pt-16 sm:px-8 sm:pb-24 sm:pt-24 lg:pt-28">
+          <div class="max-w-3xl">
+            <div class="mb-7 flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.2em] text-signal">
+              <span class="h-px w-8 bg-signal"></span>
+              Inteligencia estratégica independiente
+            </div>
+            <h1 class="max-w-3xl text-4xl font-medium leading-[1.08] tracking-[-0.045em] text-white sm:text-6xl lg:text-[4.5rem]">
+              Claridad estratégica<br class="hidden sm:block" />
+              en un mundo <span class="text-signal">en movimiento.</span>
+            </h1>
+            <p class="mt-7 max-w-xl text-base leading-7 text-muted sm:text-lg sm:leading-8">
+              Análisis independiente de los riesgos y oportunidades que definen el entorno global.
+              Señales relevantes, contexto preciso y perspectiva para decidir.
+            </p>
+            <div class="mt-9 flex flex-wrap items-center gap-4">
+              <a
+                href="#executive-summary"
+                class="inline-flex items-center gap-3 bg-signal px-5 py-3 text-xs font-semibold uppercase tracking-wider text-ink transition hover:bg-[#caf5a0]"
+              >
+                Explorar análisis
+                <span aria-hidden="true">↘</span>
+              </a>
+              <span class="font-mono text-[10px] uppercase tracking-wider text-muted">
+                Independencia · Contexto · Decisión
+              </span>
+            </div>
+          </div>
+
+          <div class="mt-16 grid grid-cols-2 border-y border-line sm:grid-cols-4">
+            <div class="border-r border-line py-5 pr-4 sm:px-5">
+              <p class="font-mono text-[9px] uppercase tracking-[0.16em] text-muted">Cobertura</p>
+              <p class="mt-2 text-sm text-slate-200">Global</p>
+            </div>
+            <div class="border-line py-5 pl-4 sm:border-r sm:px-5">
+              <p class="font-mono text-[9px] uppercase tracking-[0.16em] text-muted">Perspectiva</p>
+              <p class="mt-2 text-sm text-slate-200">Independiente</p>
+            </div>
+            <div class="border-r border-t border-line py-5 pr-4 sm:border-t-0 sm:px-5">
+              <p class="font-mono text-[9px] uppercase tracking-[0.16em] text-muted">Enfoque</p>
+              <p class="mt-2 text-sm text-slate-200">Multidisciplinar</p>
+            </div>
+            <div class="border-t border-line py-5 pl-4 sm:border-t-0 sm:px-5">
+              <p class="font-mono text-[9px] uppercase tracking-[0.16em] text-muted">Método</p>
+              <p class="mt-2 text-sm text-slate-200">Basado en evidencia</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="executive-summary" class="border-t border-line bg-panel/60">
+        <div class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
+          <div class="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
+            <div>
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-signal">01 / Briefing central</p>
+              <h2 class="mt-3 text-3xl font-medium tracking-tight text-white sm:text-4xl">Executive Summary</h2>
+            </div>
+            <p class="max-w-md text-sm leading-6 text-muted">
+              Una lectura concisa de los acontecimientos que importan y sus implicaciones estratégicas.
+            </p>
+          </div>
+
+          <article class="mt-9 border border-line bg-ink">
+            <div class="flex flex-wrap items-center justify-between gap-3 border-b border-line px-5 py-4 sm:px-7">
+              <div class="flex items-center gap-3 font-mono text-[10px] uppercase tracking-wider text-muted">
+                <span class="h-1.5 w-1.5 rounded-full bg-signal"></span>
+                Briefing ejecutivo
+                <span class="text-line">/</span>
+                <time id="today-date" datetime="">Actualización</time>
+              </div>
+              <span class="border border-line px-2.5 py-1 font-mono text-[9px] uppercase tracking-wider text-slate-400">
+                Edición global
+              </span>
+            </div>
+            <div class="grid gap-8 p-5 sm:p-7 lg:grid-cols-[1fr_260px] lg:gap-14">
+              <div>
+                <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-muted">Infraestructura crítica · Ciberespacio</p>
+                <h3 class="mt-4 max-w-2xl text-2xl font-medium leading-snug tracking-tight text-slate-100 sm:text-3xl">
+                  La resiliencia de los servicios esenciales depende tanto de sus sistemas físicos como de su superficie digital.
+                </h3>
+                <p class="mt-5 max-w-2xl text-sm leading-7 text-muted">
+                  Energía, transporte, comunicaciones y servicios financieros están cada vez más
+                  interconectados. Esa integración mejora la eficiencia, pero también amplía las
+                  dependencias entre operadores, proveedores tecnológicos y redes digitales. Una
+                  interrupción cibernética puede propagarse más allá de la organización afectada y
+                  convertirse en un riesgo operativo, económico y de continuidad.
+                </p>
+                <p class="mt-4 max-w-2xl text-sm leading-7 text-muted">
+                  La prioridad ejecutiva es conocer las dependencias críticas, reducir puntos únicos
+                  de fallo y ensayar decisiones de respuesta y recuperación antes de una crisis.
+                </p>
+              </div>
+              <aside class="border-t border-line pt-5 lg:border-l lg:border-t-0 lg:pl-7 lg:pt-0" aria-label="Temas de seguimiento">
+                <p class="font-mono text-[10px] uppercase tracking-[0.18em] text-muted">Implicaciones ejecutivas</p>
+                <ul class="mt-4 space-y-4 text-xs leading-5 text-slate-300">
+                  <li class="border-l border-signal/60 pl-3">Mapear activos esenciales y dependencias de terceros.</li>
+                  <li class="border-l border-signal/60 pl-3">Alinear continuidad operativa, ciberseguridad y gestión de crisis.</li>
+                  <li class="border-l border-signal/60 pl-3">Validar respaldo, recuperación y canales alternativos de comunicación.</li>
+                </ul>
+              </aside>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20" aria-labelledby="areas-heading">
+        <div class="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
+          <div>
+            <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-signal">02 / Evaluación ejecutiva</p>
+            <h2 id="areas-heading" class="mt-3 text-3xl font-medium tracking-tight text-white sm:text-4xl">
+            Análisis estratégico
+            </h2>
+          </div>
+          <p class="max-w-sm text-sm leading-6 text-muted">
+          Lecturas por dominio para anticipar exposición, entender implicaciones y orientar prioridades.
+          </p>
+        </div>
+
+        <div class="mt-9 grid gap-3 md:grid-cols-3">
+        <article id="geopolitica" class="scroll-mt-24 border border-line bg-panel p-6 sm:p-7">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-[10px] tracking-wider text-muted">01 — ENTORNO</span>
+              <svg aria-hidden="true" class="text-signal" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="8.5" stroke="currentColor" />
+                <path d="M3.8 12h16.4M12 3.5c2.2 2.3 3.3 5.1 3.3 8.5s-1.1 6.2-3.3 8.5c-2.2-2.3-3.3-5.1-3.3-8.5s1.1-6.2 3.3-8.5Z" stroke="currentColor" />
+              </svg>
+            </div>
+            <h3 class="mt-9 text-xl font-medium text-white">Geopolítica Global</h3>
+            <p class="mt-3 text-sm leading-6 text-muted">
+              La competencia entre potencias, la fragmentación comercial y la incertidumbre regulatoria
+              están reconfigurando el entorno en el que operan empresas e instituciones.
+            </p>
+            <div class="mt-6 border-t border-line pt-5">
+              <p class="font-mono text-[9px] uppercase tracking-[0.16em] text-signal">Lectura estratégica</p>
+              <p class="mt-2 text-xs leading-5 text-slate-300">
+                La exposición indirecta puede crecer a través de proveedores, rutas logísticas,
+                restricciones tecnológicas y cambios en el acceso a mercados.
+              </p>
+              <p class="mt-4 font-mono text-[9px] uppercase tracking-[0.16em] text-muted">Variables a observar</p>
+              <p class="mt-2 text-xs leading-5 text-muted">
+                Política comercial · Seguridad energética · Controles de exportación
+              </p>
+            </div>
+          </article>
+
+          <article id="ciberdefensa" class="scroll-mt-24 border border-line bg-panel p-6 sm:p-7">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-[10px] tracking-wider text-muted">02 — SEGURIDAD</span>
+              <svg aria-hidden="true" class="text-signal" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M12 3 19 6v5.5c0 4.2-2.8 7.7-7 9.5-4.2-1.8-7-5.3-7-9.5V6l7-3Z" stroke="currentColor" stroke-width="1.3" />
+                <path d="m9 12 2 2 4-4" stroke="currentColor" stroke-width="1.3" />
+              </svg>
+            </div>
+            <h3 class="mt-9 text-xl font-medium text-white">Ciberdefensa</h3>
+            <p class="mt-3 text-sm leading-6 text-muted">
+              La defensa activa se centra en mejorar visibilidad, detectar comportamientos anómalos
+              y contener incidentes dentro de los sistemas propios y autorizados.
+            </p>
+            <div class="mt-6 border-t border-line pt-5">
+              <p class="font-mono text-[9px] uppercase tracking-[0.16em] text-signal">Enfoque blue team</p>
+              <p class="mt-2 text-xs leading-5 text-slate-300">
+                Correlacionar telemetría, priorizar alertas por impacto y aplicar playbooks de
+                contención, recuperación y comunicación.
+              </p>
+              <p class="mt-4 font-mono text-[9px] uppercase tracking-[0.16em] text-muted">Prioridades</p>
+              <p class="mt-2 text-xs leading-5 text-muted">
+                Inventario y endurecimiento · Gestión de identidades · Respuesta ensayada
+              </p>
+            </div>
+          </article>
+
+          <article id="finanzas" class="scroll-mt-24 border border-line bg-panel p-6 sm:p-7">
+            <div class="flex items-center justify-between">
+              <span class="font-mono text-[10px] tracking-wider text-muted">03 — MERCADOS</span>
+              <svg aria-hidden="true" class="text-signal" width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path d="M4 19V5m0 14h16M7 15l4-4 3 2 5-6" stroke="currentColor" stroke-width="1.3" />
+                <path d="M16 7h3v3" stroke="currentColor" stroke-width="1.3" />
+              </svg>
+            </div>
+            <h3 class="mt-9 text-xl font-medium text-white">Análisis Financiero &amp; Riesgo</h3>
+            <p class="mt-3 text-sm leading-6 text-muted">
+              La volatilidad de tipos, divisas, energía y financiación puede amplificar tensiones
+              geopolíticas y operativas en balances y flujos de caja.
+            </p>
+            <div class="mt-6 border-t border-line pt-5">
+              <p class="font-mono text-[9px] uppercase tracking-[0.16em] text-signal">Lectura de riesgo</p>
+              <p class="mt-2 text-xs leading-5 text-slate-300">
+                Evaluar escenarios combinados permite detectar concentraciones, necesidades de
+                liquidez y sensibilidad a cambios del entorno.
+              </p>
+              <p class="mt-4 font-mono text-[9px] uppercase tracking-[0.16em] text-muted">Factores clave</p>
+              <p class="mt-2 text-xs leading-5 text-muted">
+                Liquidez · Contrapartes · Costes de insumos · Continuidad de ingresos
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      
+
+      <section id="briefings" class="border-y border-line bg-panel/60">
+        <div class="mx-auto max-w-7xl px-5 py-16 sm:px-8 sm:py-20">
+          <div class="grid gap-8 lg:grid-cols-[1fr_auto] lg:items-end">
+            <div>
+              <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-signal">03 / Contacto e inteligencia</p>
+              <h2 class="mt-3 text-3xl font-medium tracking-tight text-white sm:text-4xl">Boletín de inteligencia</h2>
+              <p class="mt-4 max-w-2xl text-sm leading-7 text-muted">
+                Reciba briefings ejecutivos y análisis sobre geopolítica, ciberdefensa, infraestructura
+                crítica y riesgo financiero. Para solicitar una suscripción o consultar sobre nuestros
+                análisis, escríbanos por correo electrónico.
+              </p>
+              <p class="mt-4 font-mono text-[10px] uppercase tracking-wider text-slate-500">
+                Envío bajo solicitud · Sin formularios ni suscripciones automáticas
+              </p>
+            </div>
+            <div class="flex flex-col gap-3 sm:flex-row lg:flex-col">
+              <a
+                href="mailto:contacto@velazquezglobalstrategy.com?subject=Solicitud%20de%20suscripci%C3%B3n%20al%20bolet%C3%ADn"
+                class="inline-flex items-center justify-center gap-3 bg-signal px-5 py-3 text-xs font-semibold uppercase tracking-wider text-ink transition hover:bg-[#caf5a0]"
+              >
+                Solicitar suscripción <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                href="mailto:contacto@velazquezglobalstrategy.com?subject=Consulta%20de%20an%C3%A1lisis"
+                class="inline-flex items-center justify-center gap-3 border border-line px-5 py-3 text-xs font-medium uppercase tracking-wider text-slate-300 transition hover:border-signal/50 hover:text-signal"
+              >
+                Contactar <span aria-hidden="true">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-line">
+      <div class="mx-auto flex max-w-7xl flex-col gap-4 px-5 py-7 sm:flex-row sm:items-center sm:justify-between sm:px-8">
+        <p class="font-mono text-[9px] uppercase tracking-[0.16em] text-muted">
+          © <span id="current-year"></span> Velazquez Global Strategy
+        </p>
+        <p class="font-mono text-[9px] uppercase tracking-[0.16em] text-slate-500">
+          Inteligencia independiente · Perspectiva global
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const currentDate = new Date();
+      const dateElement = document.getElementById("today-date");
+      dateElement.dateTime = currentDate.toISOString().slice(0, 10);
+      dateElement.textContent = new Intl.DateTimeFormat("es", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+      }).format(currentDate);
+      document.getElementById("current-year").textContent = currentDate.getFullYear();
+
+      const menuToggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      menuToggle.addEventListener("click", () => {
+        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+        menuToggle.setAttribute("aria-label", isExpanded ? "Abrir menú" : "Cerrar menú");
+        mobileMenu.classList.toggle("hidden", isExpanded);
+      });
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+          menuToggle.setAttribute("aria-expanded", "false");
+          menuToggle.setAttribute("aria-label", "Abrir menú");
+        });
+      });
+    </script>
+  </body>
+</html>
