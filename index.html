@@ -382,7 +382,7 @@
       document.getElementById("current-year").textContent = new Date().getFullYear();
 
       // El correo se arma acá para que no quede escrito entero en el HTML.
-      const correo = ["", ""].join("@");
+      const correo = ["javier6velazquez9", "gmail.com"].join("@");
       document.querySelectorAll("[data-asunto]").forEach((enlace) => {
         enlace.href = "mailto:" + correo + "?subject=" + encodeURIComponent(enlace.dataset.asunto);
       });
