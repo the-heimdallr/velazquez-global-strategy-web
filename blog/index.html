@@ -3,10 +3,21 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Análisis diario de Velazquez Global Strategy." />
+    <meta name="description" content="Análisis diario sobre geopolítica, ciberdefensa y riesgo financiero." />
     <meta name="theme-color" content="#080b0f" />
     <title>Publicaciones — Velazquez Global Strategy</title>
-    <link rel="alternate" type="application/rss+xml" title="Velazquez Global Strategy" href="../feed.xml" />
+    <link rel="canonical" href="https://velazquez-global-strategy-web.velaz.workers.dev/blog/" />
+    <link rel="alternate" type="application/rss+xml" title="Velazquez Global Strategy" href="https://velazquez-global-strategy-web.velaz.workers.dev/feed.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Velazquez Global Strategy" />
+    <meta property="og:locale" content="es_AR" />
+    <meta property="og:title" content="Publicaciones — Velazquez Global Strategy" />
+    <meta property="og:description" content="Análisis diario sobre geopolítica, ciberdefensa y riesgo financiero." />
+    <meta property="og:url" content="https://velazquez-global-strategy-web.velaz.workers.dev/blog/" />
+    <meta property="og:image" content="https://velazquez-global-strategy-web.velaz.workers.dev/imagenes/compartir.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
     <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
     <script>
       tailwind.config = {
@@ -49,7 +60,14 @@
       <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-signal">Análisis diario</p>
       <h1 class="mt-3 text-4xl font-medium tracking-tight text-white sm:text-5xl">Publicaciones</h1>
       <p class="mt-4 max-w-xl text-sm leading-7 text-muted">Lecturas breves sobre geopolítica, ciberdefensa y riesgo financiero.</p>
-      <div class="mt-10 grid gap-3">
+      <nav aria-label="Filtrar por área" class="mt-8 flex flex-wrap gap-2">
+          <a class="border px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider transition border-signal/60 text-signal" href="./" aria-current="page">Todas</a>
+          <a class="border px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider transition border-line text-muted hover:border-signal/40 hover:text-white" href="geopolitica/">Geopolítica Global</a>
+          <a class="border px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider transition border-line text-muted hover:border-signal/40 hover:text-white" href="ciberdefensa/">Ciberdefensa</a>
+          <a class="border px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider transition border-line text-muted hover:border-signal/40 hover:text-white" href="finanzas/">Análisis Financiero</a>
+          <a class="border px-3 py-1.5 font-mono text-[10px] uppercase tracking-wider transition border-line text-muted hover:border-signal/40 hover:text-white" href="general/">Análisis general</a>
+      </nav>
+      <div class="mt-8 grid gap-3">
         <p class="border border-line bg-panel p-7 text-sm text-muted">Próximamente.</p>
       </div>
     </main>

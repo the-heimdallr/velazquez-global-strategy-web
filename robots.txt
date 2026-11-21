@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://velazquez-global-strategy-web.velaz.workers.dev/sitemap.xml
